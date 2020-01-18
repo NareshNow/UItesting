@@ -1,0 +1,42 @@
+{
+  "Framework": "jasmine",
+  "TestHarnessReferenceMode": "AMD",
+  "TestHarnessLocationMode": "SettingsFileAdjacent",
+  "AMDBaseUrl": "../Compiledmodules/Tests",
+  "AMDAppDirectory": "../Compiledmodules",
+  "TestFileTimeout": 600000,
+  "EnableCodeCoverage": false,
+  "References": [
+
+    {
+      "Path": "../Scripts/require.js",
+      "IsTestFrameworkFile": true
+    },
+    {
+      "Path": "../Scripts/AMDconfig.js",
+      "IsTestFrameworkFile": true
+    }
+
+
+
+
+
+  ],
+  "Compile": {
+    "Mode": "External",
+    "Extensions": [ ".ts" ],
+    "ExtensionsWithNoOutput": [ ".d.ts" ],
+    "SourceDirectory": "../Typescripts",
+    "OutDirectory": "../Compiledmodules"
+  },
+  "Tests": [
+    {
+      "Path": "../Typescripts",
+      "Includes": [ "*.ts" ]
+    },
+    {
+      "Path": "../Compiledmodules",
+      "Includes": ["*.js"]
+    }
+  ]
+}
